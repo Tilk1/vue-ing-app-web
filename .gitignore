@@ -125,3 +125,57 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Logs
+logs
+*.log
+
+# Compiled files
+dist
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# vue-cli service generated files
+.vuepress/dist
+.vscode/
+.DS_Store
+
+# Local development files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE configuration
+.idea/
+
+# Editor directories and files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/

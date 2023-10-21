@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <v-spacer></v-spacer>
 
       <v-btn icon to="/websites">
-        <v-icon>mdi-spider-web</v-icon>
+        <v-icon>mdi-format-list-bulleted</v-icon>
       </v-btn>
 
       <v-btn icon to="/website/new">
@@ -17,7 +17,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </v-btn>
 
       <v-btn icon to="/logout">
-        <v-icon>mdi-spider-web</v-icon>
+        <v-icon>mdi-exit-to-app</v-icon>
       </v-btn>
     </v-app-bar>
 

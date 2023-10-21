@@ -1,5 +1,5 @@
 <script setup>
-import WebSite from '../components/WebSite.vue';
+import WebSite from '../components/WebSiteDetail.vue';
 </script>
 
 <template>

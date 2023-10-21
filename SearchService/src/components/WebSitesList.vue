@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { onBeforeMount } from 'vue';
-import WebSiteService from "../services/WebSiteServiceClass.js"
+import webSiteService from "../services/webSiteService.js"
 
 const websites = ref([]);
 
@@ -9,7 +9,6 @@ function getSubtitle(website){
     return `${website.url} | Cada ${website.frecuencia} | ${website.ultima}`
 }
 
-const webSiteService = new WebSiteService();
 
 function setWebSites() {
     webSiteService.getWebsites().then(result => {
@@ -31,7 +30,7 @@ onBeforeMount(() => {
             <v-list>
                 <v-list-item
                     v-for="website in websites"
-                    :key="website.id"
+                    :key="website.Id"
                     :title="website.nombre"
 
                 >

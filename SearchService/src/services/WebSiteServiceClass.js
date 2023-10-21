@@ -20,7 +20,7 @@ class WebSiteService{
 
     get(id){
         return new Promise((resolve,reject) => {
-            this.service.get('/websites/${id}').then(res => {
+            this.service.get(`/sitios/${id}`).then(res => {
                 resolve(res.data)
             })
             .catch(err => {
@@ -52,5 +52,6 @@ class WebSiteService{
     }
 
 }
+
 
 export default WebSiteService;

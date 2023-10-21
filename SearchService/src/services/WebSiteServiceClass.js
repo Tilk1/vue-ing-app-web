@@ -6,15 +6,16 @@ class WebSiteService{
         this.service = service
     }
 
-    getWebSites = () => {
-        return new Promise((resolve,reject) => {
-            this.service.get('/websites').then(res => {
-                resolve(res.data)
-            })
-            .catch(err => {
-                reject(err)
-            })
-        })
+    getWebsites() {
+        return new Promise((resolve, reject) => {
+            this.service.get('/sitios')
+                .then(res => {
+                    resolve(res.data);
+                })
+                .catch(err => {
+                    reject(err);
+                });
+        });
     }
 
     get(id){
@@ -51,3 +52,5 @@ class WebSiteService{
     }
 
 }
+
+export default WebSiteService;

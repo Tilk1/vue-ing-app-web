@@ -1,85 +1,70 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <v-app>
+    <v-app-bar color="primary darken-2" dark>
+      <v-app-bar-title class="white--text">Web Scraping Portal</v-app-bar-title>
+      <v-spacer></v-spacer>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <v-btn icon to="/websites">
+        <v-icon>mdi-spider-web</v-icon>
+      </v-btn>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+      <v-btn icon to="/website/new">
+        <v-icon>mdi-plus-circle-outline</v-icon>
+      </v-btn>
 
-  <RouterView />
+      <v-btn icon to="/logout">
+        <v-icon>mdi-spider-web</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <router-view></router-view>
+    </v-main>
+
+    <v-footer color="primary darken-2" app>
+      <span class="white--text">&copy; 2023 IAW - UNLP</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  .white--text {
+    color: white;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .primary.darken-2 {
+    background-color: #1976D2; /* Color primario con tono oscuro */
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  .primary.darken-2--text {
+    color: #1976D2; /* Texto en el color primario con tono oscuro */
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  .primary.lighten-2 {
+    background-color: #64B5F6; /* Color primario con tono claro */
   }
-}
+
+  .primary.lighten-2--text {
+    color: #64B5F6; /* Texto en el color primario con tono claro */
+  }
+
+  .accent-4 {
+    background-color: #FFC107; /* Color de acento */
+  }
+
+  .accent-4--text {
+    color: #FFC107; /* Texto en el color de acento */
+  }
+
+  .footer-color {
+    background-color: #1976D2; /* Color del pie de página */
+    color: white; /* Texto en el pie de página */
+    text-align: center;
+    padding: 10px 0;
+  }
 </style>
+
